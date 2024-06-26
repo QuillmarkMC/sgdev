@@ -1,0 +1,1 @@
+$tellraw @a[tag=ChestClicker,limit=1] [{"text":""},{"text":"[!] ","bold":true,"color":"blue"},{"text":"Removed chest at $(xyz)"}]
