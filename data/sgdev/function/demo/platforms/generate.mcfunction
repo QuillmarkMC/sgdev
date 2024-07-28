@@ -12,5 +12,5 @@ execute store result storage sgdev:demo Platform.Angle float 0.001 run scoreboar
 execute as @e[type=armor_stand,tag=sgdev.Demo.Platform,limit=1] at @s run tp @s ~ ~ ~ 0.0 0.0
 
 scoreboard players set $Count sgdev.demo 0
-execute store result storage sgdev:demo Platform.Distance int 1 run scoreboard players get $DistanceFromCenter sgdev.demo
+execute store result storage sgdev:demo Platform.Distance int 1 run scoreboard players get $Radius sgdev.demo
 execute as @e[type=armor_stand,tag=sgdev.Demo.Platform,limit=1] at @s run function sgdev:demo/platforms/loop/advance with storage sgdev:demo Platform
