@@ -6,6 +6,7 @@ execute if score $Debug sgdev.var matches 2.. run say sgdev:chests/glow/loop/che
 
 $data modify storage sgdev:glow xyz set from storage sg:chests Chunks[$(ChunkIndex)].Chests[$(ChestIndex)].xyz
 $data modify storage sgdev:glow Quality set from storage sg:chests Chunks[$(ChunkIndex)].Chests[$(ChestIndex)].Quality
+$data modify storage sgdev:glow SpawnChance set from storage sg:chests Chunks[$(ChunkIndex)].Chests[$(ChestIndex)].SpawnChance
 execute if score $Glowing sgdev.var matches 1 run function sgdev:chests/glow/loop/spawn with storage sgdev:glow
 execute if score $Glowing sgdev.var matches -1 run function sgdev:chests/glow/loop/kill with storage sgdev:glow
 

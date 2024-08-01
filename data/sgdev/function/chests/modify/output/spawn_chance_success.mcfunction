@@ -1,0 +1,1 @@
+$tellraw @a[tag=ChestClicker,limit=1] [{"text":""},{"text":"[!] ","bold":true,"color":"green"},{"text":"Rarity for chest at $(xyz) has been set to $(SpawnChance)"}]

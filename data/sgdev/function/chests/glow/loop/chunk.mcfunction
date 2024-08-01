@@ -7,4 +7,5 @@ $execute store result score $ChestIndex sgdev.glow run data get storage sg:chest
 scoreboard players remove $ChestIndex sgdev.glow 1
 execute store result storage sgdev:glow ChestIndex int 1 run scoreboard players get $ChestIndex sgdev.glow
 
+scoreboard players set $ForceloadQueryOnce sgdev.glow 0
 function sgdev:chests/glow/loop/recursive/load_storage with storage sgdev:glow

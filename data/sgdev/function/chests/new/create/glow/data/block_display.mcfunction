@@ -1,4 +1,4 @@
-execute if score $Debug sgdev.var matches 3.. run say sgdev:chests/new/create/glow/spawn
+execute if score $Debug sgdev.var matches 3.. run say sgdev:chests/new/create/glow/data/block_display
 
 #called with storage sgdev:click
 #function copied from sgdev:chests/glow/loop/data so data storages can be kept separate

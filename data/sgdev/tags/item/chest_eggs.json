@@ -1,6 +1,7 @@
 {
     "values" : [
         "silverfish_spawn_egg",
-        "pufferfish_spawn_egg"
+        "pufferfish_spawn_egg",
+        "item_frame"
     ]
 }

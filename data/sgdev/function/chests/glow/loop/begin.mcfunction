@@ -13,3 +13,4 @@ scoreboard players remove $ChunkIndex sgdev.glow 1
 
 execute store result storage sgdev:glow ChunkIndex int 1 run scoreboard players get $ChunkIndex sgdev.glow
 execute unless score $ChunkIndex sgdev.glow matches ..-1 run function sgdev:chests/glow/loop/chunk with storage sgdev:glow
+execute if score $ChunkIndex sgdev.glow matches ..-1 run function sgdev:chests/glow/loop/finish

@@ -6,6 +6,7 @@ scoreboard objectives add sgdev.math dummy
 scoreboard players set #-1 sgdev.math -1
 scoreboard players set #16 sgdev.math 16
 scoreboard players set #1000 sgdev.math 1000
+scoreboard players set #100 sgdev.math 100
 scoreboard objectives add sgdev.array dummy
 scoreboard objectives add sgdev.stats trigger
 scoreboard objectives add sgdev.eggs trigger
@@ -16,6 +17,7 @@ execute unless score $NumPlayers sgdev.demo matches 1.. run scoreboard players s
 execute unless score $Radius sgdev.demo matches 1.. run scoreboard players set $Radius sgdev.demo 30
 scoreboard objectives add sgdev.glow trigger
 execute unless score $GlowingInProgress sgdev.glow matches 1.. run scoreboard players set $GlowingInProgress sgdev.glow 0
+scoreboard objectives add sgdev.spawn_chance trigger
 
 #teams for glowing chest rarity
 team add common

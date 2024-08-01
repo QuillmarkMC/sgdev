@@ -1,4 +1,4 @@
-execute if score $Debug sgdev.var matches 2.. run say sgdev:chests/remove/remove_from_list
+execute if score $Debug sgdev.var matches 2.. run say sgdev:chests/modify/remove_from_list
 
 # @s = marker at chest location
 #called with storage sgdev:array
@@ -11,6 +11,6 @@ $execute if score $TempChunkCheck sgdev.chestVar matches 0 run data remove stora
 execute at @s if block ~ ~ ~ chest run playsound block.wood.break block @a ~ ~ ~ 1 0.8
 execute at @s if block ~ ~ ~ chest run setblock ~ ~ ~ air
 
-execute if score $Glowing sgdev.var matches 1 at @s run kill @n[type=block_display,tag=sgdev.GlowingChest]
+execute if score $Glowing sgdev.var matches 1 at @s run kill @e[type=#sgdev:glowing,tag=sgdev.GlowingChest,limit=2,sort=nearest]
 
-function sgdev:chests/remove/output/success with storage sgdev:click Chest
+function sgdev:chests/modify/output/remove_success with storage sgdev:click Chest

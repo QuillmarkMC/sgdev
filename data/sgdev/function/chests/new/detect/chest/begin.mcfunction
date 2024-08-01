@@ -16,4 +16,4 @@ execute store result score $ChestOutput sgdev.array run function sgdev:chests/ne
 execute if score $ChestOutput sgdev.array matches -1 run data modify storage sgdev:click Chest.ChunkIndex set from storage sgdev:array ChunkIndex
 execute if score $ChestOutput sgdev.array matches -1 run function sgdev:chests/new/create/chest with storage sgdev:click Chest
 #if $ChestOutput != -1, display error
-execute unless score $ChestOutput sgdev.array matches -1 run tellraw @a[tag=ChestClicker,limit=1] [{"text":""},{"text":"[!] ","bold":true,"color":"red"},{"text":"Chest already exists at this location!"}]
+execute unless score $ChestOutput sgdev.array matches -1 run function sgdev:chests/new/errors/chest_already_exists
