@@ -4,4 +4,4 @@ execute if score $Debug sgdev.var matches 2.. run say sgdev:chests/item/tag_play
 
 data modify storage sgdev:eggs UUID set from entity @s data.Owner
 data modify storage sgdev:eggs UUID_again set from entity @s data.Owner
-execute as @a[sort=random,limit=1] run function sgdev:chests/item/tag_player/loop
+execute as @a run function sgdev:chests/item/tag_player/loop
