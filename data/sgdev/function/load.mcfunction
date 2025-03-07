@@ -32,3 +32,5 @@ team add legendary
 team modify legendary color gold
 team add cornucopia
 team modify cornucopia color aqua
+team add anvil
+team modify anvil color black

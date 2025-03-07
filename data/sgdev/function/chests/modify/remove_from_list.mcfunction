@@ -8,8 +8,9 @@ $data remove storage sg:chests Chunks[$(ChunkIndex)].Chests[$(ChestIndex)]
 $execute store result score $TempChunkCheck sgdev.chestVar run data get storage sg:chests Chunks[$(ChunkIndex)].Chests
 $execute if score $TempChunkCheck sgdev.chestVar matches 0 run data remove storage sg:chests Chunks[$(ChunkIndex)]
 
-execute at @s if block ~ ~ ~ chest run playsound block.wood.break block @a ~ ~ ~ 1 0.8
-execute at @s if block ~ ~ ~ chest run setblock ~ ~ ~ air
+execute at @s if block ~ ~ ~ #sgdev:placeable if block ~ ~ ~ chest run playsound block.wood.break block @a ~ ~ ~ 1 0.8
+execute at @s if block ~ ~ ~ #sgdev:placeable if block ~ ~ ~ anvil run playsound block.anvil.break block @a ~ ~ ~ 1 0.8
+execute at @s if block ~ ~ ~ #sgdev:placeable run setblock ~ ~ ~ air
 
 execute if score $Glowing sgdev.var matches 1 at @s positioned ~ ~-0.5 ~ run kill @e[type=#sgdev:glowing,tag=sgdev.GlowingChest,limit=2,sort=nearest]
 
