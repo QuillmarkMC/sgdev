@@ -1,0 +1,5 @@
+tellraw @s [{"text":"Simulating player loot with the following chest quantities:","color": "white"}]
+tellraw @s [{"text":" • ","color": "white"},{"text":"Common: ","color": "white"},{"score":{"name":"@s","objective":"sgdev.common"},"color": "white"}]
+tellraw @s [{"text":" • ","color": "white"},{"text":"Rare: ","color": "#0070dd"},{"score":{"name":"@s","objective":"sgdev.rare"},"color": "#0070dd"}]
+tellraw @s [{"text":" • ","color": "white"},{"text":"Epic: ","color": "#a335ee"},{"score":{"name":"@s","objective":"sgdev.epic"},"color": "#a335ee"}]
+tellraw @s [{"text":" • ","color": "white"},{"text":"Cornucopia: ","color": "#e6cc80"},{"score":{"name":"@s","objective":"sgdev.cornucopia"},"color": "#e6cc80"}]
