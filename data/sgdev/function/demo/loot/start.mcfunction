@@ -1,5 +1,6 @@
 #fills the player's inventory with loot generated from the loot tables in the primary datapack
 #amount of loot is controlled per player by specifying how many of each chest type to generate
+clear @s
 
 #scoreboard players set @s sgdev.common <num>
 scoreboard players operation $LootLoop sgdev.demo = @s sgdev.common
