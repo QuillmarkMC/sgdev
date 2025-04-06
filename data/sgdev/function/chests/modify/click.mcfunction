@@ -1,4 +1,4 @@
-execute if score $Debug sgdev.var matches 1.. run say sgdev:chests/remove/click
+execute if score $Debug sgdev.var matches 1.. run say sgdev:chests/modify/click
 
 #check who placed chest egg
 function sgdev:chests/item/tag_player/check
@@ -13,6 +13,10 @@ execute store result storage sgdev:click Chest.z int 1 run data get entity @s Po
 execute store result storage sgdev:click Chunk.x int 1 run data get storage sgdev:click Chest.x 0.0625
 execute store result storage sgdev:click Chunk.z int 1 run data get storage sgdev:click Chest.z 0.0625
 
+scoreboard players operation $Temp sgdev.spawn_chance = @a[tag=ChestClicker,limit=1] sgdev.spawn_chance
+scoreboard players operation $Temp sgdev.spawn_chance *= #100 sgdev.math
+execute store result storage sgdev:click Chest.SpawnChance double 0.01 run scoreboard players operation $Temp sgdev.spawn_chance /= #100 sgdev.math
+
 function sgdev:chests/new/format_data/calculate_chunk
 function sgdev:chests/new/format_data/combine_chest_xyz with storage sgdev:click Chest
 #debug outputs
@@ -20,7 +24,8 @@ execute if score $Debug sgdev.var matches 1.. run function sgdev:chests/new/debu
 execute if score $Debug sgdev.var matches 1.. run function sgdev:chests/new/debug/display_chunk with storage sgdev:click Chunk
 execute if score $Debug sgdev.var matches 1.. run function sgdev:chests/new/debug/display_clicker
 
-function sgdev:chests/remove/detect/chunk/begin
+execute if score $GlowingInProgress sgdev.glow matches 1.. run function sgdev:chests/modify/output/glowing_in_progress
+execute unless score $GlowingInProgress sgdev.glow matches 1.. run function sgdev:chests/modify/detect/chunk/begin
 
 kill @s
 tag @a[tag=ChestClicker,limit=1] remove ChestClicker

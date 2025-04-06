@@ -8,6 +8,8 @@ scoreboard players set $rare sgdev.stats 0
 scoreboard players set $epic sgdev.stats 0
 scoreboard players set $legendary sgdev.stats 0
 scoreboard players set $cornucopia sgdev.stats 0
+scoreboard players set $anvil sgdev.stats 0
+scoreboard players set $All sgdev.stats 0
 
 #get number of chunks, use it as index to loop through chunk array and get all chests per chunk
 execute store result score $Chunks sgdev.stats run data get storage sg:chests Chunks
