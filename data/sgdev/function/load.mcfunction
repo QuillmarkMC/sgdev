@@ -19,6 +19,7 @@ scoreboard objectives add sgdev.glow trigger
 execute unless score $GlowingInProgress sgdev.glow matches 1.. run scoreboard players set $GlowingInProgress sgdev.glow 0
 scoreboard objectives add sgdev.spawn_chance trigger
 scoreboard objectives add sgdev.common dummy
+scoreboard objectives add sgdev.uncommon dummy
 scoreboard objectives add sgdev.rare dummy
 scoreboard objectives add sgdev.epic dummy
 scoreboard objectives add sgdev.cornucopia dummy
