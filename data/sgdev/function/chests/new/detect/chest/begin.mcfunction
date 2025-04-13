@@ -12,8 +12,10 @@ execute store result storage sgdev:array ChestIndex int 1 run scoreboard players
 #$ChestOutput will be the index that the chest exists at, or -1 if not present
 execute store result score $ChestOutput sgdev.array run function sgdev:chests/new/detect/chest/check_at_index with storage sgdev:array
 
+data modify storage sgdev:click Chest.ChunkIndex set from storage sgdev:array ChunkIndex
+execute store result storage sgdev:click Chest.ChestIndex int 1 run scoreboard players get $ChestOutput sgdev.array
 #if $ChestOutput = -1, add new chest
-execute if score $ChestOutput sgdev.array matches -1 run data modify storage sgdev:click Chest.ChunkIndex set from storage sgdev:array ChunkIndex
+#execute if score $ChestOutput sgdev.array matches -1 run data modify storage sgdev:click Chest.ChunkIndex set from storage sgdev:array ChunkIndex
 execute if score $ChestOutput sgdev.array matches -1 run function sgdev:chests/new/create/chest with storage sgdev:click Chest
-#if $ChestOutput != -1, display error
-execute unless score $ChestOutput sgdev.array matches -1 run function sgdev:chests/new/errors/chest_already_exists
+#if $ChestOutput != -1, update chest at that location using new data
+execute unless score $ChestOutput sgdev.array matches -1 run function sgdev:chests/new/create/update_chest with storage sgdev:click Chest
