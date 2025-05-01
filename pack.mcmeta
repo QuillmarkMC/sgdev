@@ -1,6 +1,7 @@
 {
     "pack": {
         "pack_format": 71,
-        "description": "Quillmark survival games dev pack"
+        "description": "Quillmark survival games dev pack",
+        "supported_formats": [71, 71]
     }
 }
