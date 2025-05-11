@@ -1,1 +1,1 @@
-$tellraw @a[tag=ChestClicker,limit=1] [{"text":""},{"text":"[!] ","bold":true,"color":"yellow"},{"text":"DEBUG chunk $(Pos)"}]
+$tellraw @a[tag=ChestClicker,limit=1] [{"text":"[!] ","bold":true,"color":"yellow"},{"translate":"sgdev.debug.chunk",color:white,bold:false,with:[{"text":"$(Pos)"}]}]

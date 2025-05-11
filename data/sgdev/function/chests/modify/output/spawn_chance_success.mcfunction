@@ -1,1 +1,1 @@
-$tellraw @a[tag=ChestClicker,limit=1] [{"text":""},{"text":"[!] ","bold":true,"color":"light_purple"},{"text":"Rarity for chest at $(xyz) has been set to $(SpawnChance)"}]
+$tellraw @a[tag=ChestClicker,limit=1] [{"text":"[!] ","bold":true,"color":"light_purple"},{"translate":"sgdev.chests.modify",color:white,bold:false,with:[{"text":"$(xyz)"},{"text":"$(SpawnChance)"}]}]

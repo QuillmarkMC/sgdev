@@ -1,1 +1,1 @@
-$tellraw @a[tag=ChestClicker,limit=1] [{"text":""},{"text":"[!] ","bold":true,"color":"yellow"},{"text":"DEBUG chest x:$(x) y:$(y) z:$(z)"}]
+$tellraw @a[tag=ChestClicker,limit=1] [{"text":"[!] ","bold":true,"color":"yellow"},{"translate":"sgdev.debug.chest",color:white,bold:false,with:[{"text":"$(x)"},{"text":"$(y)"},{"text":"$(z)"}]}]

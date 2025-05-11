@@ -1,1 +1,1 @@
-tellraw @a[tag=ChestClicker,limit=1] [{"text":""},{"text":"[!] ","bold":true,"color":"yellow"},{"text":"DEBUG clicker "},{"selector": "@a[tag=ChestClicker]"}]
+tellraw @a[tag=ChestClicker,limit=1] [{"text":"[!] ","bold":true,"color":"yellow"},{"translate":"sgdev.debug.clicker",color:white,bold:false,with:[{"selector": "@a[tag=ChestClicker]"}]}]
