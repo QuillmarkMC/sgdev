@@ -24,4 +24,4 @@ execute if score $LootLoop sgdev.demo matches 1.. run function sgdev:demo/loot/g
 
 scoreboard players reset @s sgdev.loot
 function sgdev:demo/loot/display
-playsound entity.experience_orb.pickup record @s
+playsound entity.experience_orb.pickup ambient @s
