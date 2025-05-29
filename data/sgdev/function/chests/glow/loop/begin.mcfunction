@@ -1,9 +1,9 @@
 execute if score $Debug sgdev.var matches 2.. run say sgdev:chests/glow/loop/begin
 
-execute if score $Glowing sgdev.var matches 1 run tellraw @s [{"text":""},{"text":"[!] ","bold":true,"color":"yellow"},{"text":"Beginning placement of glowing chests..."}]
-execute if score $Glowing sgdev.var matches -1 run tellraw @s [{"text":""},{"text":"[!] ","bold":true,"color":"yellow"},{"text":"Beginning removal of glowing chests..."}]
+execute if score $Glowing sgdev.var matches 1 run tellraw @s [{"text":"[!] ","bold":true,"color":"yellow"},{"translate":"sgdev.glow.start.place",bold:false,color:white}]
+execute if score $Glowing sgdev.var matches -1 run tellraw @s [{"text":"[!] ","bold":true,"color":"yellow"},{"translate":"sgdev.glow.start.remove",bold:false,color:white}]
 tag @s add ChestGlower
-execute at @s run playsound block.note_block.pling record @s
+execute at @s run playsound block.note_block.pling ambient @s
 scoreboard players set $GlowingInProgress sgdev.glow 1
 scoreboard players set $Timer sgdev.glow 0
 

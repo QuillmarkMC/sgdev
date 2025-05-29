@@ -6,3 +6,5 @@ execute as @e[type=marker,tag=RemoveChestMarker] at @s run function sgdev:chests
 execute as @e[type=marker,tag=SpawnChanceChestMarker] at @s run function sgdev:chests/modify/click
 
 function sgdev:trigger
+
+scoreboard players set $DevLoaded var 2

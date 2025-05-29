@@ -1,1 +1,1 @@
-$tellraw @a[tag=ChestClicker,limit=1] [{"text":""},{"text":"[!] ","bold":true,"color":"blue"},{"text":"Removed chest at $(xyz)"}]
+$tellraw @a[tag=ChestClicker,limit=1] [{"text":"[!] ","bold":true,"color":"blue"},{"translate":"sgdev.chests.remove",color:white,bold:false,with:[{"text":"$(xyz)"}]}]

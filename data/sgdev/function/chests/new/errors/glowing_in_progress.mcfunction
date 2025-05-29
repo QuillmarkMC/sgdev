@@ -1,1 +1,1 @@
-tellraw @a[tag=ChestClicker,limit=1] [{"text":""},{"text":"[!] ","bold":true,"color":"red"},{"text":"Please wait before placing down more chests..."}]
+tellraw @a[tag=ChestClicker,limit=1] [{"text":"[!] ","bold":true,"color":"red"},{"translate":"sgdev.chests.error.wait_place",color:white,bold:false}]

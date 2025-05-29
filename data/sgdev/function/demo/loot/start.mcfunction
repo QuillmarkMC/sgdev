@@ -6,6 +6,10 @@ clear @s
 scoreboard players operation $LootLoop sgdev.demo = @s sgdev.common
 execute if score $LootLoop sgdev.demo matches 1.. run function sgdev:demo/loot/give/common
 
+#scoreboard players set @s sgdev.uncommon <num>
+scoreboard players operation $LootLoop sgdev.demo = @s sgdev.uncommon
+execute if score $LootLoop sgdev.demo matches 1.. run function sgdev:demo/loot/give/uncommon
+
 #scoreboard players set @s sgdev.rare <num>
 scoreboard players operation $LootLoop sgdev.demo = @s sgdev.rare
 execute if score $LootLoop sgdev.demo matches 1.. run function sgdev:demo/loot/give/rare
@@ -20,4 +24,4 @@ execute if score $LootLoop sgdev.demo matches 1.. run function sgdev:demo/loot/g
 
 scoreboard players reset @s sgdev.loot
 function sgdev:demo/loot/display
-execute at @s run playsound entity.experience_orb.pickup record @s
+playsound entity.experience_orb.pickup ambient @s

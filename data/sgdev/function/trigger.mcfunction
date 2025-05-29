@@ -2,7 +2,7 @@ execute as @a[scores={sgdev.stats=1..}] run function sgdev:chests/stats/get
 execute as @a[scores={sgdev.eggs=1..}] run function sgdev:chests/item/give with entity @s
 execute as @a[scores={sgdev.toggle_chest_place=1..}] run function sgdev:chests/item/toggle_chest_place
 execute as @a[scores={sgdev.glow=1..}] run function sgdev:chests/glow/toggle
-execute as @a[scores={sgdev.loot=1..}] run function sgdev:demo/loot/start
+execute as @a[scores={sgdev.loot=1..}] at @s run function sgdev:demo/loot/start
 
 execute as @a if score @s sgdev.spawn_chance matches ..0 run scoreboard players set @s sgdev.spawn_chance 1
 execute as @a if score @s sgdev.spawn_chance matches 101.. run scoreboard players set @s sgdev.spawn_chance 100
