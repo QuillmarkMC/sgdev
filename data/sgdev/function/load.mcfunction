@@ -26,17 +26,17 @@ scoreboard objectives add sgdev.cornucopia dummy
 scoreboard objectives add sgdev.loot trigger
 
 #teams for glowing chest rarity
-team add common
-team modify common color white
-team add uncommon
-team modify uncommon color green
-team add rare
-team modify rare color blue
-team add epic
-team modify epic color dark_purple
-team add legendary
-team modify legendary color gold
-team add cornucopia
-team modify cornucopia color aqua
-team add anvil
-team modify anvil color black
+#team add common
+#team modify common color white
+#team add uncommon
+#team modify uncommon color green
+#team add rare
+#team modify rare color blue
+#team add epic
+#team modify epic color dark_purple
+#team add legendary
+#team modify legendary color gold
+#team add cornucopia
+#team modify cornucopia color aqua
+#team add anvil
+#team modify anvil color black

@@ -2,7 +2,7 @@ execute if score $Debug sgdev.var matches 2.. run say sgdev:chests/new/create/ch
 # @s = marker at location of chest
 
 #called with storage sgdev:click Chest
-$data modify storage sg:chests Chunks[$(ChunkIndex)].Chests append value {xyz:"$(xyz)",Quality:"$(Quality)",PlacedBy:"$(PlacedBy)",SpawnChance:$(SpawnChance)d,Facing:"$(Facing)"}
+$data modify storage sg:chests Chunks[$(ChunkIndex)].Chests append value {xyz:"$(xyz)",Quality:"$(Quality)",PlacedBy:"$(PlacedBy)",SpawnChance:$(SpawnChance)d,Facing:"$(Facing)",Color:$(Color)}
 
 $tellraw @a[tag=ChestClicker,limit=1] [{"text":"[!] ","bold":true,"color":"green"},{"translate":"sgdev.chests.new",color:white,bold:false,with:[{"text":"$(Quality)"},{"text":"$(xyz)"}]}]
 

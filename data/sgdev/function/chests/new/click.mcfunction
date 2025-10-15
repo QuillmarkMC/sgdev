@@ -16,6 +16,7 @@ execute store result storage sgdev:click Chunk.z int 1 run data get storage sgde
 data modify storage sgdev:click Chest.Quality set from entity @s data.Quality
 data modify storage sgdev:click Chest.PlacedBy set from entity @s data.Owner
 data modify storage sgdev:click Chest.SpawnChance set from entity @s data.SpawnChance
+data modify storage sgdev:click Chest.Color set from entity @s data.Color
 execute as @a[tag=ChestClicker,limit=1] run function sgdev:chests/new/get_rotation
 
 function sgdev:chests/new/format_data/calculate_chunk
