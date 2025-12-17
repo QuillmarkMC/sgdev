@@ -9,7 +9,7 @@ scoreboard players set #1000 sgdev.math 1000
 scoreboard players set #100 sgdev.math 100
 scoreboard objectives add sgdev.array dummy
 scoreboard objectives add sgdev.stats trigger
-scoreboard objectives add sgdev.eggs trigger
+scoreboard objectives add sgdev.items trigger
 scoreboard objectives add sgdev.toggle_chest_place trigger
 scoreboard objectives add sgdev.chest_place dummy
 scoreboard objectives add sgdev.demo dummy

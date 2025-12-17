@@ -1,4 +1,4 @@
-clear @s #sgdev:chest_eggs[minecraft:custom_data~{ChestEgg:1b}]
+clear @s #sgdev:chest_items[minecraft:custom_data~{ChestEgg:1b}]
 $item replace entity @s hotbar.0 with item_frame[entity_data={id:"minecraft:item_frame",Item:{id:"minecraft:pufferfish",count:1,components:{"minecraft:custom_data":{Quality:"common",Owner:$(UUID),SpawnChance:0.5,Color:16777215}}},Tags:["NewChestMarker","ChestMarker"],Invisible:true,Fixed:true,Silent:true},minecraft:custom_data={ChestEgg:1b},custom_name={"translate":"sgdev.item.common","color":"white","bold":true,"italic":false},minecraft:item_model="sgdev:common_chest"] 1
 $item replace entity @s hotbar.1 with item_frame[entity_data={id:"minecraft:item_frame",Item:{id:"minecraft:pufferfish",count:1,components:{"minecraft:custom_data":{Quality:"uncommon",Owner:$(UUID),SpawnChance:0.5,Color:2031360}}},Tags:["NewChestMarker","ChestMarker"],Invisible:true,Fixed:true,Silent:true},minecraft:custom_data={ChestEgg:1b},custom_name={"translate":"sgdev.item.uncommon","color":"#1eff00","bold":true,"italic":false},minecraft:item_model="sgdev:uncommon_chest"] 1
 $item replace entity @s hotbar.2 with item_frame[entity_data={id:"minecraft:item_frame",Item:{id:"minecraft:pufferfish",count:1,components:{"minecraft:custom_data":{Quality:"rare",Owner:$(UUID),SpawnChance:0.75,Color:28893}}},Tags:["NewChestMarker","ChestMarker"],Invisible:true,Fixed:true,Silent:true},minecraft:custom_data={ChestEgg:1b},custom_name={"translate":"sgdev.item.rare","color":"#0070dd","bold":true,"italic":false},minecraft:item_model="sgdev:rare_chest"] 1
@@ -8,6 +8,4 @@ $item replace entity @s hotbar.5 with item_frame[entity_data={id:"minecraft:item
 $item replace entity @s hotbar.6 with item_frame[entity_data={id:"minecraft:item_frame",Item:{id:"minecraft:pufferfish",count:1,components:{"minecraft:custom_data":{Quality:"anvil",Owner:$(UUID),SpawnChance:1.0,Color:1}}},Tags:["NewChestMarker","ChestMarker"],Invisible:true,Fixed:true,Silent:true},minecraft:custom_data={ChestEgg:1b},custom_name={"translate":"sgdev.item.anvil","color":"dark_gray","bold":true,"italic":false},minecraft:item_model="sgdev:anvil_chest"] 1
 $item replace entity @s hotbar.7 with item_frame[entity_data={id:"minecraft:item_frame",Item:{id:"minecraft:pufferfish",count:1,components:{"minecraft:custom_data":{Owner:$(UUID),Quality:"sus",SpawnChance:0.0,Color:0}}},Tags:["ChestMarker","RemoveChestMarker"],Invisible:true,Fixed:true,Silent:true},minecraft:custom_data={ChestEgg:1b},custom_name={"translate":"sgdev.item.delete","color":"red","bold":true,"italic":false},minecraft:item_model="sgdev:remove_chest_frame"] 1
 
-scoreboard players reset @s sgdev.eggs
-
-summon block_display ~ ~ ~ {glow_color_override:16777215}
+scoreboard players reset @s sgdev.items
