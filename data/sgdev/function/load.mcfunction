@@ -24,19 +24,6 @@ scoreboard objectives add sgdev.rare dummy
 scoreboard objectives add sgdev.epic dummy
 scoreboard objectives add sgdev.cornucopia dummy
 scoreboard objectives add sgdev.loot trigger
-
-#teams for glowing chest rarity
-#team add common
-#team modify common color white
-#team add uncommon
-#team modify uncommon color green
-#team add rare
-#team modify rare color blue
-#team add epic
-#team modify epic color dark_purple
-#team add legendary
-#team modify legendary color gold
-#team add cornucopia
-#team modify cornucopia color aqua
-#team add anvil
-#team modify anvil color black
+scoreboard objectives add sgdev.dfu dummy
+execute unless score $State sgdev.dfu matches 1.. run scoreboard players set $State sgdev.dfu -1
+scoreboard players set $GlowColor sgdev.dfu 1
