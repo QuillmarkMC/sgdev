@@ -19,6 +19,9 @@ data modify storage sgdev:click Chest.SpawnChance set from entity @s data.SpawnC
 data modify storage sgdev:click Chest.Color set from entity @s data.Color
 execute as @a[tag=ChestClicker,limit=1] run function sgdev:chests/new/get_rotation
 
+execute at @s if block ~ ~ ~ water run data modify storage sgdev:click Chest.Waterlogged set value "true"
+execute at @s unless block ~ ~ ~ water run data modify storage sgdev:click Chest.Waterlogged set value "false"
+
 function sgdev:chests/new/format_data/calculate_chunk
 function sgdev:chests/new/format_data/combine_chest_xyz with storage sgdev:click Chest
 #debug outputs
