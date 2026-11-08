@@ -6,6 +6,7 @@ execute if score $Debug sgdev.var matches 2.. run say sgdev:dfu/chest
 
 #all DFU conversions share the same loop logic, specific logic is determined by pre-defined $State
 execute if score $State sgdev.dfu = $GlowColor sgdev.dfu run function sgdev:dfu/glow_color/update with storage sgdev:dfu
+execute if score $State sgdev.dfu = $StrictChest sgdev.dfu run function sgdev:dfu/strict_chest/update with storage sgdev:dfu
 
 #recursive call, loop all chests within chunk
 execute store result storage sgdev:dfu ChestIndex int 1 run scoreboard players remove $ChestIndex sgdev.dfu 1

@@ -27,3 +27,4 @@ scoreboard objectives add sgdev.loot trigger
 scoreboard objectives add sgdev.dfu dummy
 execute unless score $State sgdev.dfu matches 1.. run scoreboard players set $State sgdev.dfu -1
 scoreboard players set $GlowColor sgdev.dfu 1
+scoreboard players set $StrictChest sgdev.dfu 2
