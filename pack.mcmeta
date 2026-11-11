@@ -3,5 +3,29 @@
         "min_format": [88,0],
         "max_format": [121,0],
         "description": "Quillmark survival games dev pack"
+    },
+    "overlays": {
+        "entries": [
+            {
+                "directory": "1.21.10",
+                "min_format": [88,0],
+                "max_format": [88,0]
+            },
+            {
+                "directory": "1.21.11",
+                "min_format": [94,1],
+                "max_format": [94,1]
+            },
+            {
+                "directory": "26.1.2",
+                "min_format": [101,1],
+                "max_format": [101,1]
+            },
+            {
+                "directory": "26.2",
+                "min_format": [107,1],
+                "max_format": [107,1]
+            }
+        ]
     }
 }
