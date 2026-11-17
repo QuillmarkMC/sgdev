@@ -10,8 +10,9 @@ $execute if score $TempChunkCheck sgdev.chestVar matches 0 run data remove stora
 
 execute at @s if block ~ ~ ~ chest run playsound block.wood.break block @a ~ ~ ~ 1 0.8
 execute at @s if block ~ ~ ~ anvil run playsound block.anvil.break block @a ~ ~ ~ 1 0.8
-execute at @s if block ~ ~ ~ #sgdev:placeable[waterlogged=true] run setblock ~ ~ ~ water strict
-execute at @s if block ~ ~ ~ #sgdev:placeable[waterlogged=false] run setblock ~ ~ ~ air strict
+execute at @s if block ~ ~ ~ chest[waterlogged=true] run setblock ~ ~ ~ water strict
+execute at @s if block ~ ~ ~ chest[waterlogged=false] run setblock ~ ~ ~ air strict
+execute at @s if block ~ ~ ~ anvil run setblock ~ ~ ~ air strict
 
 execute if score $Glowing sgdev.var matches 1 at @s positioned ~ ~-0.5 ~ run kill @e[type=#sgdev:glowing,tag=sgdev.GlowingChest,limit=2,sort=nearest]
 
